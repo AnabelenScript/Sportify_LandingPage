@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-RUN apk update && apk add nginx-mod-http-realip
+RUN apk update && apk add nginx
 RUN rm -rf /etc/nginx/conf.d/*
 COPY config/nginx.conf /etc/nginx/conf.d/default.conf
 COPY certs/cloudflare.crt /etc/nginx/certs/cloudflare.crt

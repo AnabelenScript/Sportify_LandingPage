@@ -1,0 +1,8 @@
+services:
+  landing:
+    build: .
+    ports:
+      - "80:80" 
+      - "443:433"
+    restart: always    
+    container_name: landing_page_service
